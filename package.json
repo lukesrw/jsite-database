@@ -6,7 +6,7 @@
     "scripts": {
         "clean": "tsc && node dist/src/clean",
         "build": "npm run clean && tsc",
-        "test": "mocha",
+        "test": "mocha  --reporter min",
         "git": "npm run test && npm run clean"
     },
     "dependencies": {
