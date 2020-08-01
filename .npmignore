@@ -6,3 +6,4 @@ tsconfig.*
 /dist/src/test
 *.tgz
 .eslintrc.json
+test
