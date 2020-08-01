@@ -1,0 +1,102 @@
+[
+    {
+        "file": ["views", "view1.json"],
+        "content": {
+            "column1": true,
+            "$from": "tbl1"
+        }
+    },
+    {
+        "file": ["views", "view2.json"],
+        "content": [
+            {
+                "$view": "view2",
+                "$select": {
+                    "column1": true,
+                    "$from": "tbl1"
+                }
+            },
+            {
+                "$view": "view3",
+                "$select": {
+                    "column1": true,
+                    "$from": "tbl1"
+                }
+            }
+        ]
+    },
+    {
+        "file": ["views", "view4.js"],
+        "content": "module.exports = () => { return { column1: true, $from: 'tbl2' }; }"
+    },
+    {
+        "file": ["sql", "custom.sql"],
+        "content": "CREATE TABLE IF NOT EXISTS tbl4 ( column1 VARCHAR(10) ); INSERT INTO tbl4 (column1) VALUES ('custom');"
+    },
+    {
+        "file": ["tables", "tables1.json"],
+        "content": {
+            "$define": {
+                "column1": {
+                    "$column": {
+                        "$size": 10,
+                        "$type": "VARCHAR"
+                    }
+                },
+                "column2": {
+                    "$column": {
+                        "$size": 10,
+                        "$type": "VARCHAR"
+                    }
+                },
+                "$priority": 2
+            },
+            "$table": "tbl1"
+        }
+    },
+    {
+        "file": ["tables", "tables2.json"],
+        "content": [
+            {
+                "$define": {
+                    "column1": {
+                        "$column": {
+                            "$size": 10,
+                            "$type": "VARCHAR"
+                        }
+                    },
+                    "column2": {
+                        "$column": {
+                            "$size": 10,
+                            "$type": "VARCHAR"
+                        }
+                    },
+                    "$priority": 1
+                },
+                "$table": "tbl2"
+            },
+            {
+                "$define": {
+                    "column1": {
+                        "$column": {
+                            "$size": 10,
+                            "$type": "VARCHAR"
+                        }
+                    },
+                    "column2": {
+                        "$column": {
+                            "$size": 10,
+                            "$type": "VARCHAR"
+                        }
+                    },
+                    "$priority": 3
+                },
+                "$table": "tbl3"
+            }
+        ]
+    },
+    {
+        "file": ["tables", "tables3.js"],
+        "content": "module.exports = () => { return { '$define': { 'column1': { '$column': { '$size': 10, '$type': 'VARCHAR' } }, 'column2': { '$column': { '$size': 10, '$type': 'VARCHAR' } }, '$priority': 4 }, '$table': 'tbl4' } }"
+    }
+]

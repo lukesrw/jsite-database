@@ -1,0 +1,135 @@
+{
+    "utils": {
+        "flattenObject": [
+            [
+                {
+                    "this": "is",
+                    "a": [
+                        "multi",
+                        "dimensional"
+                    ],
+                    "object": {
+                        "that": {
+                            "contains": "lots",
+                            "of": "different"
+                        },
+                        "parts": "inside"
+                    }
+                },
+                {
+                    "this": "is",
+                    "object_that_contains": "lots",
+                    "object_that_of": "different",
+                    "object_parts": "inside"
+                }
+            ]
+        ],
+        "getDate": [
+            [
+                "2019-01-02T03:04:05",
+                "2019-01-02 03:04:05"
+            ],
+            [
+                "2019-01-02 03:04:05",
+                "2019-01-02 03:04:05"
+            ],
+            [
+                "2019-01-02",
+                "2019-01-02 00:00:00"
+            ]
+        ]
+    },
+    "audit": {
+        "row": {
+            "id__history__last": "nullnull123null647",
+            "id__history": "123456789",
+            "id__history__next": "3458null79nullnull",
+            "id__updated": "110011011",
+            "id__last": "nullnull121null323",
+            "id": "1212null33nullnull",
+            "id__next": "12nullnullnull3nullnullnull",
+            "column1__updated": "111111111",
+            "column1__last": "nullnullredgreenindigonullleonardovioletdonatello",
+            "column1": "redgreenindigovioletnullleonardodonatellonullnull",
+            "column1__next": "indigovioletnullnullnulldonatellonullnullnull",
+            "column2__updated": "110011011",
+            "column2__last": "nullnullyellowblueyellownullraphaelblueraphael",
+            "column2": "yellowblueyellowbluenullraphaelraphaelnullnull",
+            "column2__next": "yellowbluenullnullnullraphaelnullnullnull",
+            "insert_date_time__updated": "110011011",
+            "insert_description__updated": "110011011",
+            "update_date_time__updated": "110011011",
+            "update_description__updated": "110011011",
+            "delete_date_time__updated": "000000000",
+            "delete_description__updated": "000000000",
+            "scd__event": "insertinsertupdateupdatedeleteinsertupdatedeletedelete"
+        },
+        "column": {
+            "id__changes__last": "nullnullnullnullnullnullnullnullnullnull29nullnullnullnullnullnullnullnullnullnull25nullnullnullnullnullnullnullnullnullnull",
+            "id__changes": "12357891012141516171819212324252628303132333436383940414345",
+            "id__changes__next": "171519212332163436381833nullnullnullnullnull393141434540nullnullnullnullnullnullnullnullnullnull",
+            "id": "111112222212111113333332222233333",
+            "field": "idcolumn1column2insert_descriptionupdate_descriptionidcolumn1column2insert_descriptionupdate_descriptioncolumn1column1idcolumn1column2insert_descriptionupdate_descriptionidcolumn1column2insert_descriptionupdate_descriptioncolumn1idcolumn1column2insert_descriptionupdate_descriptionidcolumn1column2insert_descriptionupdate_description",
+            "value__last": "nullnullnullnullnullnullnullnullnullnullredgreen1indigoyellowNo DescriptionNo Descriptionnullnullnullnullnullleonardo2violetblueNo DescriptionNo Description3donatelloraphaelNo DescriptionNo Description",
+            "value": "1redyellowNo DescriptionNo Description2greenblueNo DescriptionNo Descriptionindigovioletnullnullnullnullnull3leonardoraphaelNo DescriptionNo Descriptiondonatellonullnullnullnullnullnullnullnullnullnull",
+            "value__next": "nullindigonullnullnullnullvioletnullnullnullnullnullnullnullnullnullnullnulldonatellonullnullnullnullnullnullnullnullnullnullnullnullnullnull",
+            "scd__event": "insertinsertinsertinsertinsertinsertinsertinsertinsertinsertupdateupdatedeletedeletedeletedeletedeleteinsertinsertinsertinsertinsertupdatedeletedeletedeletedeletedeletedeletedeletedeletedeletedelete"
+        }
+    },
+    "deletes": [
+        [
+            {
+                "column1": "indigo"
+            }
+        ],
+        [{}]
+    ],
+    "inserts": [
+        [
+            {
+                "column1": "red",
+                "column2": "yellow"
+            },
+            {
+                "column1": "green",
+                "column2": "blue"
+            }
+        ],
+        [
+            {
+                "column1": "leonardo",
+                "column2": "raphael"
+            }
+        ]
+    ],
+    "updates": [
+        [
+            {
+                "set": {
+                    "column1": "indigo"
+                },
+                "where": {
+                    "column2": "yellow"
+                }
+            },
+            {
+                "set": {
+                    "column1": "violet"
+                },
+                "where": {
+                    "column2": "blue"
+                }
+            }
+        ],
+        [
+            {
+                "set": {
+                    "column1": "donatello"
+                },
+                "where": {
+                    "column2": "raphael"
+                }
+            }
+        ]
+    ]
+}
