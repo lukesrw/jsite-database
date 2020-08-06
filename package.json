@@ -4,7 +4,8 @@
     "description": "Database module for the JSite package",
     "main": "index.js",
     "scripts": {
-        "test": "mocha  --reporter min"
+        "build": "npm install",
+        "test": "npm run build && mocha  --reporter min"
     },
     "dependencies": {
         "jsite-data": "^1.3.0",
